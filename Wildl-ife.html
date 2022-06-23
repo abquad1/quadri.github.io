@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-free-5.15.4-web/css/fontawesome.min.css">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="wild-life.css">
+    
+    <title>LIL5IVE</title>
+
+    </head>
+    <body>
+        <div class="container">
+            <div class="sidebar" id="sidebar" >
+
+                <div class="navs" id="navs">
+                    <div class="nav-logo">
+                        <img src="images/Wild-life-white 1.png" alt="" class="logo-img">
+                    </div>
+
+                    <div class="navigations" id="navigations">
+                        <ul class="nav-list">
+                            <li class="nav-list-item"><a href="#">
+                                ARTISTS
+                            </a></li>
+                
+                            <li class="nav-list-item"><a href="#">
+                                SERVICES
+                            </a></li>
+                        
+                            <li class="nav-list-item"><a href="#">
+                                DEMOGRAPHY
+                            </a></li>
+                
+                                <li class="nav-list-item"><a href="#">
+                                ABOUT
+                            </a></li>
+                
+                            <li class="nav-list-item"><a href="#">
+                                CONTACT
+                            </a></li>
+                        </ul>
+                    </div>   
+                    
+                    
+                </div>
+            
+                <div class="social-icons">
+                    <ul class="list" id="list" >
+                        <li class="list-item">
+                            <a href="#" class="list-link">
+                                <i class="fab fa-twitter"></i>
+                            </a>
+                        </li>
+
+                        <li class="list-item">
+                            <a href="#" class="list-link">
+                                <i class="fab fa-facebook"></i>
+                            </a>
+                        </li>
+
+                        <li class="list-item">
+                            <a href="#" class="list-link">
+                                <i class="fab fa-instagram  "></i>
+                            </a>
+                        </li>
+
+                        <li class="list-item">
+                            <a href="#" class="list-link">
+                                <i class="fab fa-youtube"></i>
+                            </a>
+                        </li>
+                    </ul>                
+                </div>
+                <a><i class="fas fa-times-circle" id="nav_close"></i></a>
+
+            </div>
+            
+
+            <div class="main">
+                
+                <div class="navigation">
+                    <div class="logo">
+                        <img src="images/Wild-life-white 1.png" alt="" class="logo-image">
+                    </div>
+
+                    <div class="icons">
+                        <a href="#"><i class="fas fa-search"></i></a>
+                        <a"><i class="fa fa-bars" id="navigator" ></i></a>
+                    </div>
+                </div>
+
+                <img src="images/Polygon 4 (1).png" class="vector1">
+                <img src="images/Polygon 4 (1).png" class="vector2">
+
+                <div class="content">
+
+                    <h1>NEW SINGLE</h1> 
+                    <p class="new">OUT NOW ON ALL PLATFORMS</p><br>
+
+                    <p class="title">Happy</p>
+                    <audio id="player" controls>
+                        <source src="music/Mayorkun-Certified-Loner-No-Competition-(JustNaija.com).mp3" type="audio/mpeg"> 
+                    </audio>
+                   
+                <div class="bg-text"> <p>LIL5IVE</p></div>
+
+                <img src="images/Ellipse 3.png"  class="circle1">
+                <img src="images/Ellipse 4.png"  class="circle2">
+            </div>
+        </div>
+
+        <script>
+           
+       const sidebar =document.querySelector('.sidebar')
+        const bar_icon = (e) =>{
+            e.preventDefault();
+           
+            if (screen.width < 768) {
+                console.log('yes');
+                document.getElementById('sidebar').style.width = '300px' 
+                document.querySelector('.fas').style.display = 'block'             
+        } if(screen.width > 768){
+            document.getElementById('sidebar').style.width = '300px'              
+            document.querySelector('#navs').style.display = 'block';
+            document.querySelector('#sidebar').style.textAlign = 'center' 
+            document.querySelector('.list').style.display = 'inline-flex'
+            document.querySelector('.fas').style.display = 'block'             
+        }
+    }
+
+    const close_icon = (e) =>{
+        e.preventDefault();
+        if (screen.width < 768) {
+                
+            document.getElementById('sidebar').style.width = '0px'             
+
+        }
+        if(screen.width > 768){
+            document.getElementById('sidebar').style.width = '60px'              
+            document.querySelector('#navs').style.display = 'none'; 
+            document.querySelector('.list').style.display = 'block'
+            document.querySelector('.fas').style.display = 'none'
+        }
+    }
+           const closes = document.querySelector('#nav_close');
+        closes.addEventListener('click', close_icon, false);
+
+            const opens = document.querySelector('#navigator');
+         opens.addEventListener('click', bar_icon, false);
+
+        </script>
+    </body>
+</html>
